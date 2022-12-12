@@ -15,6 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $titoloPagina ?></title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1><?php echo $titolo ?></h1>
@@ -26,7 +27,7 @@
     <form action="" method="GET">
 
         <label for="">Parola da sostituire</label>
-        <input type="text" name='cambiaParola'>
+        <input type="text" name='cambiaParola' placeholder="Inserisci la parola da censurare">
         <button>Cambia</button>
 
         <p> <?php echo str_replace($_GET['cambiaParola'], '***', $paragrafo) ?></p>
