@@ -18,6 +18,22 @@
 </head>
 <body>
     <h1><?php echo $titolo ?></h1>
+
     <p> <?php echo $paragrafo ?></p>
+
+    <p> La lunghezza del paragrafo è <?php echo strlen($paragrafo) ?> caratteri </p>
+
+    <form action="" method="GET">
+
+        <label for="">Parola da sostituire</label>
+        <input type="text" name='cambiaParola'>
+        <button>Cambia</button>
+
+        <p> <?php echo str_replace($_GET['cambiaParola'], '***', $paragrafo) ?></p>
+
+        <p> La nuova lunghezza del paragrafo è <?php echo ( strlen(str_replace($_GET['cambiaParola'], '***', $paragrafo))) ?> caratteri </p>
+
+    </form>
+
 </body>
 </html>
